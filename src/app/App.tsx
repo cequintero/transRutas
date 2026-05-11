@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { HashRouter, Routes, Route } from 'react-router';
 import { RouteProvider, useRoute } from './context/RouteContext';
 import { BottomNav } from './components/BottomNav';
 import { HomeScreen } from './components/HomeScreen';
@@ -33,10 +33,10 @@ function AppShell() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <RouteProvider>
         <AppShell />
       </RouteProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
