@@ -17,7 +17,6 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
-  // IMPORTANTE: cambia 'NOMBRE-DE-TU-REPO' por el nombre real de tu repositorio
   base: '/transRutas/',
   plugins: [
     figmaAssetResolver(),
