@@ -1,0 +1,231 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+
+  /* TransRutas Bogotá Color System */
+
+  /* Primary Colors */
+  --transmi-red: #CC1B2B;
+  --deep-red: #9B1520;
+  --soft-rose: #FDE8EA;
+
+  /* Secondary Colors */
+  --transit-blue: #1A73E8;
+  --deep-blue: #1557B0;
+  --sky-mist: #E8F0FE;
+
+  /* Congestion/Status Colors */
+  --fresh-green: #0D9F4F;
+  --warm-amber: #F4A825;
+  --alert-red: #E53935;
+  --mint-wash: #E6F7ED;
+  --honey-wash: #FFF3D6;
+  --rose-wash: #FDEAEA;
+
+  /* Neutral Palette */
+  --snow-white: #FAFBFC;
+  --pure-white: #FFFFFF;
+  --soft-gray: #E2E6EA;
+  --muted-gray: #8B95A2;
+  --charcoal: #3D4852;
+  --near-black: #1A202C;
+  --fog-gray: #CBD5E0;
+
+  /* Route Type Colors */
+  --trunk-route: #1A73E8;
+  --feeder-green: #00897B;
+  --transfer-orange: #FB8C00;
+  --walk-gray: #90A4AE;
+
+  /* Standard theme variables */
+  --background: #FAFBFC;
+  --foreground: #1A202C;
+  --card: #FFFFFF;
+  --card-foreground: #1A202C;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A202C;
+  --primary: #CC1B2B;
+  --primary-foreground: #FFFFFF;
+  --secondary: #1A73E8;
+  --secondary-foreground: #FFFFFF;
+  --muted: #E2E6EA;
+  --muted-foreground: #8B95A2;
+  --accent: #E8F0FE;
+  --accent-foreground: #1A202C;
+  --destructive: #E53935;
+  --destructive-foreground: #FFFFFF;
+  --border: #E2E6EA;
+  --input: transparent;
+  --input-background: #FFFFFF;
+  --switch-background: #E2E6EA;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #CC1B2B;
+  --chart-1: #0D9F4F;
+  --chart-2: #F4A825;
+  --chart-3: #E53935;
+  --chart-4: #1A73E8;
+  --chart-5: #00897B;
+  --radius: 1rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A202C;
+  --sidebar-primary: #CC1B2B;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FAFBFC;
+  --sidebar-accent-foreground: #1A202C;
+  --sidebar-border: #E2E6EA;
+  --sidebar-ring: #CC1B2B;
+}
+
+.dark {
+  --background: #0F1117;
+  --foreground: #F1F5F9;
+  --card: #1A1D27;
+  --card-foreground: #F1F5F9;
+  --popover: #1A1D27;
+  --popover-foreground: #F1F5F9;
+  --primary: #EF4444;
+  --primary-foreground: #F1F5F9;
+  --secondary: #60A5FA;
+  --secondary-foreground: #F1F5F9;
+  --muted: #2D3348;
+  --muted-foreground: #64748B;
+  --accent: #242836;
+  --accent-foreground: #F1F5F9;
+  --destructive: #F87171;
+  --destructive-foreground: #F1F5F9;
+  --border: #2D3348;
+  --input: transparent;
+  --input-background: #242836;
+  --switch-background: #2D3348;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #EF4444;
+  --chart-1: #34D399;
+  --chart-2: #FBBF24;
+  --chart-3: #F87171;
+  --chart-4: #60A5FA;
+  --chart-5: #2DD4BF;
+  --sidebar: #1A1D27;
+  --sidebar-foreground: #F1F5F9;
+  --sidebar-primary: #EF4444;
+  --sidebar-primary-foreground: #F1F5F9;
+  --sidebar-accent: #242836;
+  --sidebar-accent-foreground: #F1F5F9;
+  --sidebar-border: #2D3348;
+  --sidebar-ring: #EF4444;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--near-black);
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--near-black);
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--near-black);
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.0;
+    letter-spacing: 0.01em;
+  }
+
+  input {
+    font-size: 15px;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  .dark h1, .dark h2, .dark h3 {
+    color: var(--foreground);
+  }
+}
