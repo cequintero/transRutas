@@ -16,8 +16,8 @@ function figmaAssetResolver() {
   }
 }
 
-export default defineConfig({
-  base: '/transRutas/',
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '/' : '/transRutas/',
   plugins: [
     figmaAssetResolver(),
     react(),
@@ -25,8 +25,9 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      // Alias @ to the src directory
       '@': path.resolve(__dirname, './src'),
     },
   },
   assetsInclude: ['**/*.svg', '**/*.csv'],
-})
+}))

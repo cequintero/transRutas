@@ -1,5 +1,5 @@
 import { ArrowLeft, Share2, Bus, Footprints, GitBranch, Star } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useRoute } from '../context/RouteContext';
 import { stationMap } from '../lib/transmilenio';
@@ -11,10 +11,12 @@ export function RouteDetailScreen() {
   const [sheetHeight, setSheetHeight] = useState<'peek' | 'half' | 'full'>('half');
 
   const route = ctx.selectedRoute;
-  if (!route) {
-    navigate('/results');
-    return null;
-  }
+
+  useEffect(() => {
+    if (!route) navigate('/', { replace: true });
+  }, [route, navigate]);
+
+  if (!route) return null;
 
   // Build step-by-step directions from route segments
   const steps = route.segments.map((seg) => {

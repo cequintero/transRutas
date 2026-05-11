@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowRight, GitBranch, MapPin } from 'lucide-react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useRoute } from '../context/RouteContext';
 import { stationMap } from '../lib/transmilenio';
@@ -7,6 +8,12 @@ import { NetworkMap } from './NetworkMap';
 export function RouteResultsScreen() {
   const navigate = useNavigate();
   const ctx = useRoute();
+
+  useEffect(() => {
+    if (!ctx.originId || !ctx.destId) navigate('/', { replace: true });
+  }, [ctx.originId, ctx.destId, navigate]);
+
+  if (!ctx.originId || !ctx.destId) return null;
 
   const handleSelectRoute = (route: typeof ctx.routes[0]) => {
     ctx.selectRoute(route);
